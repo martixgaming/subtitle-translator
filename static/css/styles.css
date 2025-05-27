@@ -1,0 +1,244 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+    gap: 20px;
+    
+}
+
+/* Header */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.8rem;
+    color: #34495e;
+    font-weight: 500px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease-in-out;
+}
+
+h1:hover {
+    color: #2c3e50;
+}
+
+/* Card Layout */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+/* File Upload Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Input File */
+input[type="file"] {
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"]:hover {
+    background-color: #2980b9;
+    transform: scale(1.03);
+}
+
+input[type="file"]:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Video Player */
+video {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Bar */
+progress {
+    margin-top: 20px;
+    width: 100%;
+    height: 16px;
+    border-radius: 8px;
+    appearance: none;
+    background-color: #e5e7eb; /* Neutral light gray for contrast */
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block; /* Ensure the progress bar is visible */
+}
+
+progress::-webkit-progress-bar {
+    background-color: #e5e7eb; /* Neutral light gray for contrast */
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #60a5fa, #1276f1); /* Modern gradient effect */
+    border-radius: 8px;
+    transition: width 0.4s ease-in-out; /* Smooth transition */
+}
+
+progress::-moz-progress-bar {
+    background: linear-gradient(90deg, #60a5fa, #1276f1); /* Modern gradient effect */
+    border-radius: 8px;
+    transition: width 0.4s ease-in-out; /* Smooth transition */
+}
+
+progress:indeterminate {
+    background: repeating-linear-gradient(
+        -45deg,
+        #e5e7eb,
+        #e5e7eb 10px,
+        #d1d5db 10px,
+        #d1d5db 20px
+    ); /* Animated stripes for indeterminate state */
+    animation: progress-indeterminate 1.5s linear infinite;
+}
+
+@keyframes progress-indeterminate {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 0;
+    }
+}
+
+/* Select Dropdown */
+select {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    color: #374151;
+    transition: all 0.3s ease-in-out;
+    width: auto; /* Adjust width to fit next to the button */
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23737484'%3E%3Cpath fill-rule='evenodd' d='M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0-1.414z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    margin-left: 10px; /* Add spacing between the button and the select dropdown */
+}
+
+select:hover {
+    background-color: #f3f4f6;
+    border-color: #60a5fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+select:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+    transform: scale(1.03);
+}
+
+select option {
+    color: #374151;
+    background-color: #ffffff;
+    padding: 10px;
+    font-size: 15px;
+}
+
+select:active {
+    background-color: #f9fafb;
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .card {
+        padding: 20px;
+        margin: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    button, select, input[type="file"] {
+        width: 90%;
+        max-width: none;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    progress {
+        height: 12px;
+    }
+}
