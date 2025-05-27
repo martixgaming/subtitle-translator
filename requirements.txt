@@ -4,3 +4,6 @@ ffmpeg-python
 torch
 gunicorn
 googletrans==4.0.0-rc1
+pysrt
+webvtt-py
+
